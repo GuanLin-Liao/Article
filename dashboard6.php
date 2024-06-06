@@ -1,5 +1,5 @@
 <?php
-require_once("../topicsall.connect.php");
+require_once("../db_connect.php");
 
 $sql = "SELECT articles.*,articles_category.name FROM articles
 JOIN articles_category ON articles.category_id = articles_category.id WHERE valid=1";

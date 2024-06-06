@@ -1,5 +1,5 @@
 <?php
-require_once("../topicsall.connect.php");
+require_once("../db_connect.php");
 $sql ="SELECT articles_category.id AS category_id,articles_category.name,articles_category.created_at,articles_category.updated_at FROM articles_category  ";
 $result = $conn->query($sql);
 $rows = $result->fetch_all(MYSQLI_ASSOC);
@@ -78,7 +78,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                 <input type="file" class="form-control" accept="image/*" onchange="previewImage(event)" name="imgUrl" id="imgUrl" >
                 <label class="form-label " for="content">文章內容:</label>
                <textarea name="content" id="content" class="form-control" rows="8"></textarea>
-               <button type="submit" class="btn btn-primary">送出</button>
+               <button type="submit" class="btn btn-success">送出</button>
                
             </form>
 

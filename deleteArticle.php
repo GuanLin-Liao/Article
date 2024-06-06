@@ -1,5 +1,5 @@
 <?php
-require_once("../topicsall.connect.php");
+require_once("../db_connect.php");
 
 if(!isset($_GET["id"])){
     echo "請循正常管道進入此頁";

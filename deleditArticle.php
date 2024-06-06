@@ -1,5 +1,5 @@
 <?php
-require_once("../topicsall.connect.php");
+require_once("../db_connect.php");
 
 $id =$_GET["id"];
 
@@ -81,11 +81,11 @@ $rowsOne = $resultOne->fetch_assoc();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    確認刪除文章?
+                    要重新上架此文章?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="deleteArticle.php?id=<?=$rowsOne["id"]?>" type="button" class="btn btn-primary">確認</a>
+                    <a href="backArticle.php?id=<?=$rowsOne["id"]?>" type="button" class="btn btn-primary">確認</a>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@ $rowsOne = $resultOne->fetch_assoc();
            
            <div class="d-flex justify-content-between">
            <a href="Articles.php"><button class="btn btn-success mb-2"><i class="bi bi-arrow-bar-left"></i>返回</button></a>
-           <a class="d-inline-block me-1" ><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#deleteModal<?=$rowsOne["id"]?>"><i class="bi bi-arrow-bar-left"></i></button></a>
+           <a class="d-inline-block me-1" ><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#deleteModal<?=$rowsOne["id"]?>"><i class="fa-solid fa-rotate-left"></i></button></a>
            </div>
             <form action="doeditArticle.php" class=" form-control mb-3" method="post">
             
